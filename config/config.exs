@@ -13,10 +13,10 @@ config :chirp,
 # Configures the endpoint
 config :chirp, ChirpWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "ub8fb6Q2icZko+Y7SFUGsvJFToZ+GGIn7mkN2i6oma1xMbDXjyR1LTZsKy2Qu54L",
+  secret_key_base: "oeknUnt5f1MwJyFoA10C6AjVimN+aA/p2Ju0UtusGPNemiK+mCh079kERAyjh9+h",
   render_errors: [view: ChirpWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Chirp.PubSub,
-  live_view: [signing_salt: "Xz9/UU5v"]
+  live_view: [signing_salt: "v7WxuCJl"]
 
 # Configures Elixir's Logger
 config :logger, :console,

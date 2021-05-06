@@ -1,10 +1,10 @@
 # Chirp
 
-This is a tutorial by Chris McCord (https://youtu.be/MZvmYaFkNJI), I'm not yet sure if I'll continue it further.
+To start your Phoenix server:
 
-To start Phoenix server:
-
-  * Setup the project with `mix setup`
+  * Install dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.setup`
+  * Install Node.js dependencies with `npm install` inside the `assets` directory
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

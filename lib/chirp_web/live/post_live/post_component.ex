@@ -5,8 +5,9 @@ defmodule ChirpWeb.PostLive.PostComponent do
     ~L"""
     <div id="post-<%= @post.id %>" class="post">
       <div class="row">
-      <img alt="Qries" width=50 height=50 style="border-radius:50%" src="https://media-exp1.licdn.com/dms/image/C4D03AQGv9ouOmGy1cw/profile-displayphoto-shrink_200_200/0/1614004824536?e=1625097600&v=beta&t=9lScLcQSnG47MzQizE5OdaGeWXOtineJJkyffAXjYi0"
-      onclick="document.location.href='https://media-exp1.licdn.com/dms/image/C4D03AQGv9ouOmGy1cw/profile-displayphoto-shrink_200_200/0/1614004824536?e=1625097600&v=beta&t=9lScLcQSnG47MzQizE5OdaGeWXOtineJJkyffAXjYi0'">
+        <div class="column column-10">
+          <div class="post-avatar"></div>
+        </div>
         <div class="column column-90 post-body">
           <b>@<%= @post.username %></b>
           <br/>
@@ -34,15 +35,5 @@ defmodule ChirpWeb.PostLive.PostComponent do
       </div>
     </div>
     """
-  end
-
-  def handle_event("like", _, socket) do
-    Chirp.Timeline.inc_likes(socket.assigns.post)
-    {:noreply, socket}
-  end
-
-  def handle_event("repost", _, socket) do
-    Chirp.Timeline.inc_reposts(socket.assigns.post)
-    {:noreply, socket}
   end
 end
